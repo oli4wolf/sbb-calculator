@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <!-- If you don't use jQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/LoadGo/2.2/loadgo-nojquery.min.js"></script>
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <h1 id="result">Resultat</h1>
+  <img id="gbt" src="img/gbt.png" style="width: 100%;" />
+
+  <script>
+    var image = document.getElementById("gbt");
+    image.onload = function () {
+      Loadgo.init(document.getElementById('gbt'));
+    };
+  </script>
+  <div>
+  <h3 id="gbt-text"></h3>
+  <h3 id="gbt-prozent-text"></h3>
+  <h3 id="giruno-text"></h3>
+  <h3 id="ga2-text"></h3>
+  <h3 id="ga1-text"></h3>
+  </div>
+
+<hr>
+
+  <div>
+  <!-- Add your site or application content here -->
+  <p>Neugierig wie viel dein Projekt umgerechnet kostet?</p>
+  <form id="fteForm" onsubmit="return validateForm(this);return false;">
+    Anzahl FTE: <input type="number" name="fte"><br>
+    Anzahl Tage: <input type="number" name="days" value="232"><br>
+    Kosten pro Stunde im Durchschnitt: <input type="number" name="cost" value="0.0"><br>
+  <p>ODER</p>
+    Kosten in kCHF: <input type="number" name="chf"><br>
+    <button type='button' onclick="validateForm(this)">Submit</button>
+  </form>
+  </div>
+</body>
+
+</html>
